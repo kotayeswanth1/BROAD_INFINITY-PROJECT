@@ -1,0 +1,205 @@
+[training@localhost ~]$ hive
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+Hive history file=/tmp/training/hive_job_log_training_202307201008_1208538751.txt
+hive> select * from custermers INNER JOIN purchase on custermers.userID = purchase.userID;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307201005_0001, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307201005_0001
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307201005_0001
+Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+2023-07-20 10:11:52,695 Stage-1 map = 0%,  reduce = 0%
+2023-07-20 10:12:06,674 Stage-1 map = 50%,  reduce = 0%, Cumulative CPU 4.45 sec
+2023-07-20 10:12:08,324 Stage-1 map = 50%,  reduce = 0%, Cumulative CPU 4.45 sec
+2023-07-20 10:12:09,365 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:10,395 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:11,441 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:12,575 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:14,401 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:15,544 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:18,442 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:19,482 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:20,591 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:22,421 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:23,457 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:24,499 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:25,534 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:26,568 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:27,647 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:28,720 Stage-1 map = 100%,  reduce = 67%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:30,438 Stage-1 map = 100%,  reduce = 67%, Cumulative CPU 9.93 sec
+2023-07-20 10:12:31,519 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:32,545 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:33,596 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:34,889 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:35,922 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:37,429 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:38,452 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:40,471 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:41,493 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:42,514 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:43,548 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:44,596 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+2023-07-20 10:12:45,950 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:BUG: soft lockup - CPU#2 stuck for 61s! [java:5030]
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Process java (pid: 5030, ti=f1134000 task=f10c4000 task.ti=f1134000)
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Stack:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Call Trace:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Code: 8b 7c 24 14 8b 6c 24 18 83 c4 1c c3 90 8d 74 26 00 8b 0d dc 68 a4 c0 81 c2 f0 00 00 00 89 f0 ff 51 78 8b 53 0c 85 d2 74 b7 f3 90 <8b> 06 85 c0 75 f8 eb ad 8d b6 00 00 00 00 64 8b 15 64 56 b2 c0 
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:BUG: soft lockup - CPU#0 stuck for 61s! [java:5016]
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Process java (pid: 5016, ti=f246c000 task=c1491000 task.ti=f246c000)
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Stack:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Call Trace:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Code: 89 c8 f0 81 28 00 00 00 01 74 05 e8 2c fe ff ff c3 8d b4 26 00 00 00 00 66 ba 00 01 f0 66 0f c1 10 38 f2 74 0e f3 90 8d 74 26 00 <66> 83 38 00 75 f4 eb e5 c3 8d 74 26 00 f0 81 28 00 00 00 01 74 
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:BUG: soft lockup - CPU#3 stuck for 64s! [java:5029]
+2023-07-20 10:14:25,486 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Process java (pid: 5029, ti=f2732000 task=f10ce000 task.ti=f2732000)
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Stack:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Call Trace:
+
+Message from syslogd@localhost at Jul 20 10:14:25 ...
+ kernel:Code: 8d 74 26 00 89 c8 f0 81 28 00 00 00 01 74 05 e8 2c fe ff ff c3 8d b4 26 00 00 00 00 66 ba 00 01 f0 66 0f c1 10 38 f2 74 0e f3 90 <8d> 74 26 00 66 83 38 00 75 f4 eb e5 c3 8d 74 26 00 f0 81 28 00 
+2023-07-20 10:14:28,506 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 26.97 sec
+MapReduce Total cumulative CPU time: 26 seconds 970 msec
+Ended Job = job_202307201005_0001
+MapReduce Jobs Launched: 
+Job 0: Map: 2  Reduce: 1   Cumulative CPU: 26.97 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 26 seconds 970 msec
+OK
+1	John Doe	john.doe@example.com	1	2023-01-01 10:05:00.0	100
+2	Jane Smith	jane.smith@example.com	2	2023-01-01 10:08:00.0	150
+3	Robert Johnson	robert.johnson@example.com	3	2023-01-01 10:09:00.0	200
+4	Lisa Brown	lisa.brown@example.com	4	2023-01-01 10:13:00.0	120
+5	Michael Wilson	michael.wilson@example.com	5	2023-01-01 10:17:00.0	80
+Time taken: 218.473 seconds
+hive> select * from clickstream INNER JOIN purchase ON customeer.userID =purchase.userID;
+FAILED: SemanticException [Error 10009]: Line 1:49 Invalid table alias 'customeer'
+hive> select * from clickstream INNER JOIN purchase ON customeer.userID =purchas                                                                                    
+    > ;
+hive> select * from clickstream INNER JOIN purchase ON clickstream.userID =purchase.userID;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307201005_0002, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307201005_0002
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307201005_0002
+Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+2023-07-20 10:21:09,550 Stage-1 map = 0%,  reduce = 0%
+2023-07-20 10:22:10,288 Stage-1 map = 0%,  reduce = 0%
+2023-07-20 10:22:40,661 Stage-1 map = 50%,  reduce = 0%, Cumulative CPU 5.66 sec
+2023-07-20 10:22:41,693 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:42,714 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:43,749 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:44,796 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:45,872 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:47,436 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:48,465 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:49,511 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:51,442 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:53,421 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:55,420 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:56,513 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:57,576 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:58,602 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:22:59,622 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.18 sec
+2023-07-20 10:23:00,645 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:01,679 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:02,705 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:03,749 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:04,774 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:05,792 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:08,436 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:09,460 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:11,416 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:13,425 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:14,455 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:15,587 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:16,740 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:17,921 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:19,092 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:20,229 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:21,356 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:22,516 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:23,611 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:24,743 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:25,893 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:27,037 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:28,490 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:30,632 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:32,517 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:34,508 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+2023-07-20 10:23:35,690 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 18.88 sec
+MapReduce Total cumulative CPU time: 18 seconds 880 msec
+Ended Job = job_202307201005_0002
+MapReduce Jobs Launched: 
+Job 0: Map: 2  Reduce: 1   Cumulative CPU: 18.88 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 18 seconds 880 msec
+OK
+1	2023-01-01 10:00:00.0	homepage	1	2023-01-01 10:05:00.0	100
+1	2023-01-01 10:01:00.0	product_page	1	2023-01-01 10:05:00.0	100
+1	2023-01-01 10:00:00.0	homepage	1	2023-01-01 10:05:00.0	100
+1	2023-01-01 10:01:00.0	product_page	1	2023-01-01 10:05:00.0	100
+2	2023-01-01 10:03:00.0	cart_page	2	2023-01-01 10:08:00.0	150
+2	2023-01-01 10:02:00.0	homepage	2	2023-01-01 10:08:00.0	150
+2	2023-01-01 10:03:00.0	cart_page	2	2023-01-01 10:08:00.0	150
+2	2023-01-01 10:02:00.0	homepage	2	2023-01-01 10:08:00.0	150
+3	2023-01-01 10:06:00.0	product_page	3	2023-01-01 10:09:00.0	200
+3	2023-01-01 10:07:00.0	cart_page	3	2023-01-01 10:09:00.0	200
+3	2023-01-01 10:05:00.0	homepage	3	2023-01-01 10:09:00.0	200
+3	2023-01-01 10:05:00.0	homepage	3	2023-01-01 10:09:00.0	200
+3	2023-01-01 10:06:00.0	product_page	3	2023-01-01 10:09:00.0	200
+3	2023-01-01 10:07:00.0	cart_page	3	2023-01-01 10:09:00.0	200
+4	2023-01-01 10:10:00.0	product_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:11:00.0	cart_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:12:00.0	checkout_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:12:00.0	checkout_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:09:00.0	homepage	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:10:00.0	product_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:11:00.0	cart_page	4	2023-01-01 10:13:00.0	120
+4	2023-01-01 10:09:00.0	homepage	4	2023-01-01 10:13:00.0	120
+5	2023-01-01 10:16:00.0	product_page	5	2023-01-01 10:17:00.0	80
+5	2023-01-01 10:15:00.0	homepage	5	2023-01-01 10:17:00.0	80
+5	2023-01-01 10:15:00.0	homepage	5	2023-01-01 10:17:00.0	80
+5	2023-01-01 10:16:00.0	product_page	5	2023-01-01 10:17:00.0	80
+Time taken: 157.194 seconds
+hive> 
+

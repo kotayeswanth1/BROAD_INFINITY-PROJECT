@@ -1,0 +1,53 @@
+[training@localhost ~]$ hive
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+Hive history file=/tmp/training/hive_job_log_training_202307190623_414686617.txt
+hive> select * from purchase
+    > ;
+OK
+1	2023-01-01 10:05:00.0	100
+2	2023-01-01 10:08:00.0	150
+3	2023-01-01 10:09:00.0	200
+4	2023-01-01 10:13:00.0	120
+5	2023-01-01 10:17:00.0	80
+Time taken: 33.338 seconds
+hive> select * from clickstream;
+FAILED: SemanticException [Error 10001]: Line 1:14 Table not found 'clickstream'
+hive> select * from custermers; 
+OK
+1	John Doe	john.doe@example.com
+2	Jane Smith	jane.smith@example.com
+3	Robert Johnson	robert.johnson@example.com
+4	Lisa Brown	lisa.brown@example.com
+5	Michael Wilson	michael.wilson@example.com
+Time taken: 0.221 seconds
+hive> select * from clickstream;
+OK
+1	2023-01-01 10:00:00.0	homepage
+1	2023-01-01 10:01:00.0	product_page
+2	2023-01-01 10:02:00.0	homepage
+2	2023-01-01 10:03:00.0	cart_page
+3	2023-01-01 10:05:00.0	homepage
+3	2023-01-01 10:06:00.0	product_page
+3	2023-01-01 10:07:00.0	cart_page
+4	2023-01-01 10:09:00.0	homepage
+4	2023-01-01 10:10:00.0	product_page
+4	2023-01-01 10:11:00.0	cart_page
+4	2023-01-01 10:12:00.0	checkout_page
+5	2023-01-01 10:15:00.0	homepage
+5	2023-01-01 10:16:00.0	product_page
+1	2023-01-01 10:00:00.0	homepage
+1	2023-01-01 10:01:00.0	product_page
+2	2023-01-01 10:02:00.0	homepage
+2	2023-01-01 10:03:00.0	cart_page
+3	2023-01-01 10:05:00.0	homepage
+3	2023-01-01 10:06:00.0	product_page
+3	2023-01-01 10:07:00.0	cart_page
+4	2023-01-01 10:09:00.0	homepage
+4	2023-01-01 10:10:00.0	product_page
+4	2023-01-01 10:11:00.0	cart_page
+4	2023-01-01 10:12:00.0	checkout_page
+5	2023-01-01 10:15:00.0	homepage
+5	2023-01-01 10:16:00.0	product_page
+Time taken: 0.397 seconds
+hive> 
+
